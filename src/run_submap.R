@@ -8,16 +8,12 @@
 ## whatsoever. Neither the Broad Institute nor MIT can be responsible for its
 ## use, misuse, or functionality
 
-print(getwd())
-
 suppressMessages(suppressWarnings(library(getopt)))
 suppressMessages(suppressWarnings(library(optparse)))
 
 sessionInfo()
 
 args <- commandArgs(trailingOnly=TRUE)
-
-libdir <- args[1]
 
 option_list <- list(
   make_option("--input.data.A", dest="input.data.A"),
