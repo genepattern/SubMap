@@ -1,0 +1,2 @@
+INFO  [Thread-0] org.apache.http.impl.client.DefaultHttpClient - I/O exception (java.net.SocketException) caught when processing request to {s}->https://gp-beta-ami.genepattern.org:443: Broken pipe (Write failed): 25 Apr 2018 16:41:16,356
+INFO  [Thread-0] org.apache.http.impl.client.DefaultHttpClient - Retrying request to {s}->https://gp-beta-ami.genepattern.org:443: 25 Apr 2018 16:41:16,357
