@@ -1,15 +1,16 @@
 #SubMap
 #Wed Oct 07 16:11:03 UTC 2020
 JVMLevel=2.5.0
-LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00101\:3
+LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00101\:3.1
 author=Yujin Hoshida, Broad Institute
-commandLine=<R2.5> <libdir>submap.R submap.main <datasetA.file> <datasetB.file> <classA.file> <classB.file> <output.filename> <num.marker.genes> <num.perm> <num.perm.fisher> <weighted.score.type> <null.distribution> <p.value.correction> <cluster.rows> <cluster.columns> <nominal.p.value.matrix> <create.legend> <random.seed>
+commandLine=Rscript /submap/run_submap.R --input.data.A=<datasetA.file> --input.data.B=<datasetB.file> --input.cls.A=<classA.file> --input.cls.B=<classB.file> --output.filename=<output.filename> --num.marker.genes=<num.marker.genes> --num.perm=<num.perm> --num.perm.fisher=<num.perm.fisher> --weighted.score.type=<weighted.score.type> --null.distribution=<null.distribution> --p.value.correction=<p.value.correction> --cluster.rows=<cluster.rows> --cluster.columns=<cluster.columns> --nominal.p.value.matrix=<nominal.p.value.matrix> --create.legend=<create.legend> --random.seed=<random.seed>
 cpuType=any
 description=Maps subclasses between two data sets
 domain=
 fileFormat=png;txt
 language=R
 name=SubMap
+job.docker.image=genepattern/submap:0.1
 os=any
 p10_default_value=Bonferroni
 p10_description=p-value correction method
