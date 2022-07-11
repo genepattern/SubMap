@@ -7,15 +7,19 @@
 # Note: this test uses a custom diff command
 #
 
-name: "ExampleModule - Basic test"
-module: ExampleModule
+name: "SubMap - Smoke test"
+module: SubMap 
 params:
-    filename: "../data/data_placeholder.txt"
-    add_custom_message: "True"
-    message_to_add: "This message has been added."
-    output_filename: "gp_unit_test_file"
+    datasetA.file: "./data/cluster2.for.SubMap.GSE17536.gct"
+    classA.file: "./data/cluster2.for.SubMap.GSE17536.cls"
+    datasetB.file: "./data/skcm.subtype.for.SubMap.GSE17536.gct"
+    classB.file: "./data/skcm.subtype.for.SubMap.GSE17536.cls"
+    output.filename: "submap_gpunit"
 assertions:
         diffCmd: diff <%gpunit.diffStripTrailingCR%> -q
         files:
-            "gp_unit_test_file.txt":
-                diff: "output/basic_test/created_file_ground_truth.txt"
+            "submap_gpunit_nominal_p_matrix_AonB.gct":
+            "submap_gpunit_nominal_p_matrix_AonB.png":
+            "submap_gpunit_Bonferroni_SAmatrix.gct":
+            "submap_gpunit_Bonferroni_SAmatrix.png":
+            "legend.png":
